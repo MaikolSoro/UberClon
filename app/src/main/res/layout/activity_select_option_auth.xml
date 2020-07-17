@@ -34,6 +34,7 @@
             android:textSize="20sp"
             android:textStyle="bold"/>
         <Button
+            android:id="@+id/btnGoToLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
@@ -44,6 +45,7 @@
             android:layout_marginRight="30dp"/>
 
         <Button
+            android:id="@+id/btnGoToRegister"
             android:layout_width="match_parent"
             android:background="@drawable/rounded_button"
             android:backgroundTint="@color/colorWhite"
