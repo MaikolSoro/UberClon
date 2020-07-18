@@ -18,6 +18,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.michael.uberclone.includes.MyToolbar;
 import com.michael.uberclone.models.User;
 
 import dmax.dialog.SpotsDialog;
@@ -33,20 +34,14 @@ public class RegisterActivity extends AppCompatActivity {
     private TextInputEditText mTextInputName;
     private TextInputEditText mTextInputEmail;
     private TextInputEditText mTextInputPassword;
-    private Toolbar mToolbar;
     public AlertDialog mDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        MyToolbar.show(this, "Registro de usuario", true);
 
-
-        // toolbar
-        mToolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("Registrar usuario");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mButtonRegister = findViewById(R.id.btnRegister);
         mTextInputName = findViewById(R.id.textInputName);

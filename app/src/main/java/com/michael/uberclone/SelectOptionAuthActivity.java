@@ -9,20 +9,18 @@ import android.widget.Button;
 
 import androidx.appcompat.widget.Toolbar;
 
+import com.michael.uberclone.includes.MyToolbar;
+
 public class SelectOptionAuthActivity extends AppCompatActivity {
 
-    public Toolbar mToolbar;
     public Button  mButtonGoToLogin;
     public Button  mButtonGoToRegister;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_option_auth);
+        MyToolbar.show(this, "Selecciona una opción", true);
 
-        mToolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("Seleccionar opción");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mButtonGoToLogin = findViewById(R.id.btnGoToLogin);
         mButtonGoToRegister = findViewById(R.id.btnGoToRegister);
