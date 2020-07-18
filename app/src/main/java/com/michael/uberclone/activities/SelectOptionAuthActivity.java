@@ -1,18 +1,21 @@
-package com.michael.uberclone;
+package com.michael.uberclone.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.appcompat.widget.Toolbar;
-
+import com.michael.uberclone.R;
+import com.michael.uberclone.activities.client.RegisterActivity;
+import com.michael.uberclone.activities.driver.RegisterDriverActivity;
 import com.michael.uberclone.includes.MyToolbar;
 
 public class SelectOptionAuthActivity extends AppCompatActivity {
 
+    public SharedPreferences mPref;
     public Button  mButtonGoToLogin;
     public Button  mButtonGoToRegister;
     @Override
@@ -36,6 +39,7 @@ public class SelectOptionAuthActivity extends AppCompatActivity {
                 goToRegister();
             }
         });
+        mPref =  getApplicationContext().getSharedPreferences("typeUser", MODE_PRIVATE);
     }
 
     private void goToLogin() {
@@ -43,7 +47,13 @@ public class SelectOptionAuthActivity extends AppCompatActivity {
         startActivity(intent);
     }
     private void goToRegister() {
-        Intent intent =  new Intent(SelectOptionAuthActivity.this, RegisterActivity.class);
-        startActivity(intent);
-    }
+        String typeUser = mPref.getString("user", "");
+        if(typeUser.equals("client")) {
+            Intent intent =  new Intent(SelectOptionAuthActivity.this, RegisterActivity.class);
+            startActivity(intent);
+        } else {
+            Intent intent =  new Intent(SelectOptionAuthActivity.this, RegisterDriverActivity.class);
+            startActivity(intent);
+        }
+     }
 }

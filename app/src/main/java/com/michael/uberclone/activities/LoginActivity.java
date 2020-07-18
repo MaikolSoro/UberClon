@@ -1,8 +1,7 @@
-package com.michael.uberclone;
+package com.michael.uberclone.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
@@ -17,6 +16,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.michael.uberclone.R;
 import com.michael.uberclone.includes.MyToolbar;
 
 import dmax.dialog.SpotsDialog;
