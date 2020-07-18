@@ -12,7 +12,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".LoginActivity"
             android:parentActivityName=".SelectOptionAuthActivity"></activity>
-        <activity android:name=".RegisterActivity" />
+        <activity android:name=".RegisterActivity"
+            android:parentActivityName=".SelectOptionAuthActivity"/>
         <activity android:name=".SelectOptionAuthActivity"
             android:parentActivityName=".MainActivity"/>
         <activity android:name=".MainActivity">
