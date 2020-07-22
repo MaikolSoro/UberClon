@@ -41,7 +41,7 @@ public class RegisterDriverActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_driver);
-        MyToolbar.show(this, "Registro de conductor", true);
+        MyToolbar.show(this, "Registro de usuario", true);
 
         mAuthProvider = new AuthProvider();
         mDriverProvider = new DriverProvider();
